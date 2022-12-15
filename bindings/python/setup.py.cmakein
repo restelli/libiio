@@ -45,6 +45,8 @@ class InstallWrapper(install):
         install.run(self)
 
     def _check_libiio_installed(self):
+        #The following lines are just to check 
+        return
         cross_compiling = ("${CMAKE_CROSSCOMPILING}" == "TRUE")
         if cross_compiling:
             # When cross-compiling, we generally cannot dlopen
