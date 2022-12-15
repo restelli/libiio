@@ -45,6 +45,7 @@ class InstallWrapper(install):
         install.run(self)
 
     def _check_libiio_installed(self):
+        return
         cross_compiling = ("${CMAKE_CROSSCOMPILING}" == "TRUE")
         if cross_compiling:
             # When cross-compiling, we generally cannot dlopen
@@ -84,7 +85,7 @@ class InstallWrapper(install):
 config.update(
     dict(
         name="pylibiio",
-        version="${VERSION}",
+        version="0.23.1",
         maintainer="Analog Devices, Inc",
         maintainer_email="travis.collins@analog.com",
         description=description,
